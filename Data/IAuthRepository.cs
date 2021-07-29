@@ -14,4 +14,19 @@ namespace DatingApp.API.Data
 
         Task<bool> UserExist(string username);
     }
+
+    public class A
+    {
+        public A(int a)
+        {
+
+        }
+    }
+    public class B : A
+    {
+        public B(int a) : base(a)
+        {
+
+        }
+    }
 }

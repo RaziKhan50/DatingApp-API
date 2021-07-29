@@ -45,7 +45,7 @@ namespace DatingApp.API.Controllers
                   id = createdUser.Id}, UserToReturn);
         }
         [HttpPost("login")]
-        public async Task<IActionResult> Login(UserForLoginDto userForLoginDto)
+        public async Task<IActionResult> login(UserForLoginDto userForLoginDto)
         {
             //throw new Exception("Computer say no");
             var userFromRepo = await _repo.Login(userForLoginDto.Username.ToLower(), userForLoginDto.Password);
@@ -75,6 +75,8 @@ namespace DatingApp.API.Controllers
                 user
             });
         }
+
+        
 
     }
 }
